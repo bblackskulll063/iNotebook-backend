@@ -6,9 +6,8 @@ const bcrypt = require('bcryptjs');
 var jwt = require('jsonwebtoken');
 var fetchuser = require('../middleware/fetchuser');
 
-// require('dotenv').config()
-// const JWT_SECRET = process.env.JWT_SECRET_KEY;
-const JWT_SECRET='Thisismyfullproject'
+require('dotenv').config()
+const JWT_SECRET=process.env.JWT_SECRET_KEY;
 
 // ROUTE 1: Create a User using: POST "/api/auth/createuser". No login required
 router.post('/createuser', [

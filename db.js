@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const url = "mongodb+srv://himanshu412:Inotebook8130@cluster0.s0bd9hm.mongodb.net/?retryWrites=true&w=majority";
+require('dotenv').config()
+const url = process.env.MONGO_ATLAS_URL;
+
 const connectToMongo = async ()=>{
     try {
         await mongoose.connect(url);
